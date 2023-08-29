@@ -31,12 +31,13 @@ function App() {
  
   function resetInput(e) { 
     e.preventDefault(); 
-    setResult((result) => result / Number(inputRef.current.value));
+    inputRef.current.value = ""; // Clear the input field
+    
   }; 
  
   function resetResult(e) { 
     e.preventDefault(); 
-    setResult((result) => result / Number(inputRef.current.value));
+    setResult(0) ; //Set result to zero
   }; 
  
   return ( 
@@ -46,11 +47,10 @@ function App() {
       </div> 
       <form> 
         <p ref={resultRef}> 
-          {/* add the value of the current total */} 
+          {result} 
         </p>
         
-        <input
-          pattern="[0-9]" 
+        <input 
           ref={inputRef} 
           type="number" 
           placeholder="Type a number" 

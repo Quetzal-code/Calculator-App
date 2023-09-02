@@ -31,13 +31,13 @@ function App() {
  
   function resetInput(e) { 
     e.preventDefault(); 
-    inputRef.current.value = ""; // Clear the input field
+    inputRef.current.value = ""; 
     
   }; 
  
   function resetResult(e) { 
     e.preventDefault(); 
-    setResult(0) ; //Set result to zero
+    setResult(0) ; 
   }; 
  
   return ( 
